@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext, useEffect } from 'react';
+import { Context } from './context/Context';
+import { BrowserRouter as Router } from 'react-router-dom'
+
+import AnimatedRoutes from './components/AnimatedRoutes';
+import Loader from './components/Loader';
+
+import './styles/App.scss';
 
 function App() {
+
+  const { loading, setLoading } = useContext(Context); 
+
+  useEffect(() => {
+
+    setLoading(true);
+
+    setTimeout(() => {
+
+      setLoading(false);
+
+    }, 2200);
+
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Router>
+
+        { loading ? <Loader /> : <AnimatedRoutes /> }
+        
+      </Router>
+
     </div>
   );
 }

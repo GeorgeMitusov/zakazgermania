@@ -1,0 +1,124 @@
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: var(--black-color2);
+    border-bottom: 3px ridge var(--main-gray-color);
+    border-top: 3px ridge var(--main-gray-color);
+    border-right: 5px ridge var(--main-gray-color);
+    border-left: 5px ridge var(--main-gray-color);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .navbar {
+        width: 100%;
+        height: 80px;
+        color: var(--black-color);
+        opacity: 0.85;
+        z-index: 100;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .navbar-container {
+            height: 100%;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .header-logo {
+                width: 15%;
+                height: 100%;
+                cursor: pointer;
+                border-top: 2px ridge var(--main-gray-color);
+                border-bottom: 3px ridge var(--main-gray-color);
+            }
+        }
+    }
+}
+
+@media screen and ( max-width: 1550px ) {
+    .header {
+
+        .navbar {
+            width: 100%;
+
+            .navbar-container {
+                width: 90%;
+                height: 100%;
+
+                .header-logo {
+                    border-top: 3px ridge var(--main-gray-color);
+                }
+            }
+        }
+    }
+}
+
+@media screen and ( max-width: 1050px ) {
+    .header {
+        z-index: 100;
+
+        .navbar {
+            opacity: 0.95;
+            z-index: 5;
+
+            .navbar-container {
+                width: 100%;
+                height: 64px;
+
+                display: block;
+                position: relative;
+                z-index: 5;
+
+                .header-logo {
+                    width: 18%;
+                    margin-left: 5%;
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and ( max-width: 750px ) {
+    .header {
+
+        .navbar {
+    
+            .navbar-container {
+
+                .header-logo {
+                    width: 25%;
+                    margin-left: 6%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and ( max-width: 550px ) {
+    .header {
+
+        .navbar {
+    
+            .navbar-container {
+
+                .header-logo {
+                    width: 31%;
+                    margin-left: 4%;
+                }
+            }
+        }
+    }
+}

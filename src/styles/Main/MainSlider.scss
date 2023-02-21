@@ -1,0 +1,125 @@
+.slick-slider {
+    width: 100%;
+    height: 88vh;
+
+    .slider {
+        width: 100%;
+        height: 88vh;
+
+        .slide {
+            width: 100%;
+            height: 88vh;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .slide-overlay {
+                width: 100%;
+                height: 25vh;
+
+                background-color: var(--black-trans-color);
+                color: red;
+
+                position: absolute;
+                bottom: 75px;
+
+                display: flex;
+                align-items: center;
+
+                .slide-overlay-container {
+                    width: 7%;
+                    height: 90%;
+                    color: var(--white-color);
+                    margin-left: 4%;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    h1 {
+                        font: 4rem var(--merri-bold);
+                        margin-bottom: 1rem;
+                    }
+
+                    h4 {
+                        font-family: var(--merri-bold-italic);
+                        font-size: 1.4rem;
+                        margin-bottom: 2rem;
+                        color: var(--gray-color3);
+                    }
+
+                    span {
+                        width: 10%;
+                        border: 3px solid var(--white-color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and ( max-width: 1550px ) {
+    .slick-slider {
+        height: 86vh;
+    }
+}
+
+@media screen and ( max-width: 1050px ) {
+    .slick-slider {
+
+        .slider {
+
+            .slide {
+
+                .slide-overlay {
+
+                    .slide-overlay-container {
+                        height: 100%;
+                        width: 10%;
+                        margin-left: 2.5%;
+
+                        h1 {
+                            font-size: 3rem;
+                        }
+
+                        h4 {
+                            font-size: 1rem;
+                        }
+
+                        span {
+                            border-width: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and ( max-width: 700px ) {
+    .slick-slider {
+
+        .slider {
+
+            .slide {
+
+                .slide-overlay {
+
+                    .slide-overlay-container {
+                        width: 13%;
+                        margin-left: .7%;
+
+                        h1 {
+                            font-size: 2.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and ( max-width: 550px ) {}

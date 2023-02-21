@@ -1,0 +1,110 @@
+@font-face {
+    font-family: playfair-regular;
+    src: url('../fonts/playfair/PlayfairDisplay-Regular.ttf');
+}
+
+@font-face {
+    font-family: playfair-regular-italic;
+    src: url('../fonts/playfair/PlayfairDisplay-Italic.ttf');
+}
+
+@font-face {
+    font-family: playfair-medium;
+    src: url('../fonts/playfair/PlayfairDisplay-Medium.ttf');
+}
+
+@font-face {
+    font-family: playfair-bold;
+    src: url('../fonts/playfair/PlayfairDisplay-Bold.ttf');
+}
+
+@font-face {
+    font-family: playfair-extraBold;
+    src: url('../fonts/playfair/PlayfairDisplay-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: playfair-semiBold;
+    src: url('../fonts/playfair/PlayfairDisplay-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: roboto-regular;
+    src: url('../fonts/roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: roboto-medium;
+    src: url('../fonts/roboto/Roboto-Medium.ttf');
+}
+
+@font-face {
+    font-family: roboto-bold;
+    src: url('../fonts/roboto/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: roboto-bold-italic;
+    src: url('../fonts/roboto/Roboto-BoldItalic.ttf');
+}
+
+@font-face {
+    font-family: roboto-black;
+    src: url('../fonts/roboto/Roboto-Black.ttf');
+}
+
+@font-face {
+    font-family: merri-regular;
+    src: url('../fonts/merriweather/Merriweather-Regular.ttf');
+}
+
+@font-face {
+    font-family: merri-light;
+    src: url('../fonts/merriweather/Merriweather-Light.ttf');
+}
+
+@font-face {
+    font-family: merri-bold;
+    src: url('../fonts/merriweather/Merriweather-Bold.ttf');
+}
+
+@font-face {
+    font-family: merri-bold-italic;
+    src: url('../fonts/merriweather/Merriweather-BoldItalic.ttf');
+}
+
+:root { 
+    --black-color1: #000000;
+    --black-color2: #111111;
+    --black-color3: #1e1e1e;
+    --black-color4: #3c3c3c;
+    --black-color5: #4d4d4d;
+    --black-trans-color: #00000080;
+    --main-gray-color: #2f2e2e;
+    --gray-color1: #434343;
+    --gray-color2: #7c7c7c;
+    --gray-color3: #a6a6a6;
+    --gray-color4: #dbdbdb;
+    --white-color: #FFFFFF;
+
+    --playfair-regular: playfair-regular, sans-serif;
+    --playfair-regular-italic: playfair-regular-italic, sans-serif;
+    --playfair-medium: playfair-medium, sans-serif;
+    --playfair-bold: playfair-bold, sans-serif;
+    --playfair-extraBold: playfair-extraBold, sans-serif;
+    --playfair-semiBold: playfair-semiBold, sans-serif;
+
+    --roboto-regular: roboto-regular, sans-serif;
+    --roboto-medium: roboto-medium, sans-serif;
+    --roboto-bold: roboto-bold, sans-serif;
+    --roboto-bold-italic: roboto-bold-italic, sans-serif;
+    --roboto-semiBold: roboto-black, sans-serif;
+
+    --merri-regular: merri-regular, sans-serif;
+    --merri-light: merri-light, sans-serif;
+    --merri-bold: merri-bold, sans-serif;
+    --merri-bold-italic: merri-bold-italic, sans-serif;
+    
+    --standard-size: 16px;
+    --bigger-size: 32px;
+}

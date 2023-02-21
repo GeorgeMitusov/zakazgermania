@@ -1,0 +1,21 @@
+.contact-page {
+    width: 100%;
+    height: 70vh;
+    background-color: teal;
+
+    display: flex;
+
+    .contact-page-wrap {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+
+        display: flex;
+
+        .contact-page-info {
+            width: 50%;
+            height: 100%;
+            background-color: gold;
+        }
+    }
+}

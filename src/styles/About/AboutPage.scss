@@ -1,0 +1,50 @@
+.about-box {
+    width: 100%;
+    height: 30vh;
+
+    background-image: url('../../assets/about/about-page/6.jpg');
+    background-position: 80% 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .about-wrap {
+        width: 100%;
+        height: 100%;
+        background-color: var(--black-color1);
+        opacity: .8;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            color: var(--white-color);
+            font: 4.5rem var(--merri-bold);
+            margin-bottom: 1rem;
+        }
+
+        span {
+            width: 5%;
+            border: 4px solid var(--gray-color3);
+        }
+    }
+}
+
+@media screen and ( max-width: 1550px ) {
+    .about-box {
+        height: 50vh;
+    }
+}
+
+@media screen and ( max-width: 1050px ) {
+    .about-box {}
+}
+
+@media screen and ( max-width: 700px ) {
+    .about-box {}
+}
+
+@media screen and ( max-width: 550px ) {
+    .about-box {}
+}

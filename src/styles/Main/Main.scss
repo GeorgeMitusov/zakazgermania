@@ -1,0 +1,34 @@
+.main {
+    width: 100%;
+    height: 570vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--white-color);
+}
+
+@media screen and ( max-width: 1550px ) {
+    .main {
+        height: 665vh;
+    }
+}
+
+@media screen and ( max-width: 1050px ) {
+    .main {
+        height: 690vh;
+    }
+}
+
+@media screen and ( max-width: 700px ) {
+    .main {
+        height: 1000vh;
+    }
+}
+
+@media screen and ( max-width: 550px ) {
+    .main {
+        height: 1050vh;
+    }
+}
