@@ -315,3 +315,107 @@
         }
     }
 }
+
+@media screen and ( max-width: 425px ) {
+    .main-trust {
+
+        .main-trust-box {
+
+            .main-trust-slider-box {
+
+                .main-trust-slider-custom {
+
+                    .main-trust-slide {
+
+                        .main-trust-slide-overlay {
+
+                            .slide-overlay-container {
+
+                                .slide-overlay-left {
+
+                                    .slide-overlay-icon {
+                                        font-size: 3rem;
+                                    }
+                                }
+
+                                .slide-overlay-right {
+                                    padding: 0;
+                                    margin: 0;
+
+                                    h1 {
+                                        text-align: center;
+                                        font-size: 1.3rem;
+                                        padding: .5rem;
+                                    }
+
+                                    h4 {
+                                        font-size: .8rem; 
+                                        padding: 1rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .slick-dots {
+                right: -7px;
+            }
+        }
+    }
+}
+
+@media screen and ( max-width: 320px ) {
+    .main-trust {
+
+        .main-trust-box {
+
+            .main-trust-slider-box {
+                padding: .5rem;
+
+                .main-trust-slider-custom {
+                    width: 95%;
+                    padding: .5rem;
+
+                    .main-trust-slide {
+                        width: 95%;
+
+                        .main-trust-slide-overlay {
+                            width: 100%;
+
+                            .slide-overlay-container {
+
+                                .slide-overlay-left {
+
+                                    .slide-overlay-icon {
+                                        font-size: 3rem;
+                                    }
+                                }
+
+                                .slide-overlay-right {
+                                    padding: 0;
+                                    margin: 0;
+
+                                    h1 {
+                                        text-align: center;
+                                        font-size: 1rem;
+                                    }
+
+                                    h4 {
+                                        font-size: .7rem; 
+                                        padding: 1rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .slick-dots {
+                right: 0px;
+            }
+        }
+    }
+}

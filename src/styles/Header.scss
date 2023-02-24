@@ -27,22 +27,15 @@
 
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
 
-        .navbar-container {
+        .header-logo {
+            width: 13%;
             height: 100%;
-            width: 90%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            .header-logo {
-                width: 15%;
-                height: 100%;
-                cursor: pointer;
-                border-top: 2px ridge var(--main-gray-color);
-                border-bottom: 3px ridge var(--main-gray-color);
-            }
+            cursor: pointer;
+            border-top: 2px ridge var(--main-gray-color);
+            border-bottom: 3px ridge var(--main-gray-color);
+            margin-left: 3rem;
         }
     }
 }
@@ -53,13 +46,8 @@
         .navbar {
             width: 100%;
 
-            .navbar-container {
-                width: 90%;
-                height: 100%;
-
-                .header-logo {
-                    border-top: 3px ridge var(--main-gray-color);
-                }
+            .header-logo {
+                border-top: 3px ridge var(--main-gray-color);
             }
         }
     }
@@ -67,41 +55,25 @@
 
 @media screen and ( max-width: 1050px ) {
     .header {
-        z-index: 100;
 
         .navbar {
             opacity: 0.95;
-            z-index: 5;
 
-            .navbar-container {
-                width: 100%;
-                height: 64px;
-
-                display: block;
-                position: relative;
-                z-index: 5;
-
-                .header-logo {
-                    width: 18%;
-                    margin-left: 5%;
-                    border: none;
-                }
+            .header-logo {
+                width: 18%;
             }
         }
     }
 }
 
-@media screen and ( max-width: 750px ) {
+@media screen and ( max-width: 700px ) {
     .header {
 
         .navbar {
-    
-            .navbar-container {
 
-                .header-logo {
-                    width: 25%;
-                    margin-left: 6%;
-                }
+            .header-logo {
+                width: 27%;
+                margin-left: 1.5rem;
             }
         }
     }
@@ -111,13 +83,47 @@
     .header {
 
         .navbar {
-    
-            .navbar-container {
 
-                .header-logo {
-                    width: 31%;
-                    margin-left: 4%;
-                }
+            .header-logo {
+                width: 30%;
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and ( max-width: 425px ) {
+    .header {
+
+        .navbar {
+
+            .header-logo {
+                width: 38%;
+                margin-left: 0.5rem;
+            }
+        }
+    }
+}
+
+@media screen and ( max-width: 375px ) {
+    .header {
+
+        .navbar {
+    
+            .header-logo {
+                width: 43%;
+            }
+        }
+    }
+}
+
+@media screen and ( max-width: 320px ) {
+    .header {
+
+        .navbar {
+
+            .header-logo {
+                width: 50%;
             }
         }
     }

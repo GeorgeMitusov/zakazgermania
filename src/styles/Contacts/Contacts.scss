@@ -15,15 +15,14 @@
     }
 }
 
-@media screen and ( max-width: 1050px ) {
-    .contacts {}
-}
-
 @media screen and ( max-width: 700px ) {
     .contacts {
         height: 250vh;
     }
 }
 
-@media screen and ( max-width: 550px ) {
+@media screen and ( max-width: 320px ) {
+    .contacts {
+        height: 260vh;
+    }
 }

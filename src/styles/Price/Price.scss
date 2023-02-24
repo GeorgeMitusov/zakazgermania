@@ -35,3 +35,21 @@
     .price {
     }
 }
+
+@media screen and ( max-width: 425px ) {
+    .price {
+        height: 600vh;
+    }
+}
+
+@media screen and ( max-width: 375px ) {
+    .price {
+        height: 600vh;
+    }
+}
+
+@media screen and ( max-width: 320px ) {
+    .price {
+        height: 635vh;
+    }
+}

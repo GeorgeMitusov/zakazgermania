@@ -1,4 +1,5 @@
 .side-menu {
+    border: 1px solid red;
 
     .side-menu-list {
         border: 1px solid transparent;
@@ -75,13 +76,16 @@
     background-color: var(--black-color2);
 }
 
-.bm-item-list {
-}
-
 .bm-item {
     display: inline-block;
 }
 
 .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
+}
+
+@media screen and ( max-width: 700px ) {
+    .bm-burger-button {
+        right: 1.5rem;
+    }
 }

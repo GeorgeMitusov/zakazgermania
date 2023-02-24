@@ -130,4 +130,45 @@
     }
 }
 
-@media screen and ( max-width: 550px ) {}
+@media screen and ( max-width: 425px ) {
+    .signs {
+        height: 165vh;
+    }
+}
+
+@media screen and ( max-width: 375px ) {
+    .signs {
+        height: 175vh;
+    }
+}
+
+@media screen and ( max-width: 320px ) {
+    .signs {
+        height: 185vh;
+
+        .signs-parallax {
+
+            .signs-container {
+                width: 80%;
+
+                .signs-item {
+
+                    .signs-item-icon {
+                        font-size: 4rem;
+                    }
+
+                    .signs-item-descr {
+
+                        h1 {
+                            font-size: 1.5rem;
+                        }
+
+                        p {
+                            font-size: .9rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

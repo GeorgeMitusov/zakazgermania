@@ -70,3 +70,20 @@
         }
     }
 }
+
+@media screen and ( max-width: 320px ) {
+    .front-page-box {
+
+        .front-page-wrap {
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            span {
+                width: 20%;
+            }
+           
+        }
+    }
+}

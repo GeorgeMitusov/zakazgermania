@@ -29,3 +29,21 @@
 
 @media screen and ( max-width: 550px ) {
 }
+
+@media screen and ( max-width: 425px ) {
+    .about {
+        height: 680vh;
+    }
+}
+
+@media screen and ( max-width: 375px ) {
+    .about {
+        height: 700vh;
+    }
+}
+
+@media screen and ( max-width: 320px ) {
+    .about {
+        height: 720vh;
+    }
+}

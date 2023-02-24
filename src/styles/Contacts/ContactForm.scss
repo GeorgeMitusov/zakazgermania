@@ -129,7 +129,7 @@
 
         .contact-form {
             height: 70%;
-            margin-top: 2rem;
+            margin-top: 8rem;
         }
     }
 }
@@ -140,6 +140,7 @@
 
         .contact-form {
             width: 50%;
+            margin-top: 10rem;
         }
     }
 }
@@ -159,6 +160,25 @@
 
         .contact-form {
             width: 85%;
+        }
+    }
+}
+
+@media screen and ( max-width: 425px ) {
+    .contact-form-wrap {
+
+        .contact-form {
+            margin-top: 10rem;
+        }
+    }
+}
+
+@media screen and ( max-width: 320px ) {
+    .contact-form-wrap {
+        height: 160vh;
+
+        .contact-form {
+            width: 95%;
         }
     }
 }

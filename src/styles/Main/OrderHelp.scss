@@ -83,7 +83,7 @@
 
 @media screen and ( max-width: 700px ) {
     .main-order-help-wrap {
-        height: 20vh;
+        height: 25vh;
 
         .main-order-help {
 
@@ -121,3 +121,40 @@
         }
     }
 }
+
+@media screen and ( max-width: 425px ) {
+    .main-order-help-wrap {
+
+        .main-order-help {
+
+            .main-order-help-box {
+
+                h1 {
+                    font-size: 1rem;
+                    text-align: center;
+                }
+
+                button {
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and ( max-width: 375px ) {
+    .main-order-help-wrap {
+
+        .main-order-help {
+
+            .main-order-help-box {
+
+                h1 {
+                    font-size: 1rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+

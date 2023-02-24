@@ -190,3 +190,13 @@
         }
     } 
 }
+
+@media screen and ( max-width: 425px ) {
+    .main-offer {
+
+        h1 {
+            font-size: 1.3rem;
+            text-align: center;
+        }
+    } 
+}

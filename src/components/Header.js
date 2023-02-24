@@ -13,13 +13,9 @@ const Header = () => {
       
       <nav className="navbar">
 
-        <div className="navbar-container container">
+        <img src={Logo} className="header-logo" alt="header-logo" />
 
-          <img src={Logo} className="header-logo" alt="header-logo" />
-
-          <SideMenu />
-
-        </div>
+        <SideMenu />
 
       </nav>
 

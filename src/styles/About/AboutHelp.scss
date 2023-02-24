@@ -89,3 +89,44 @@
         }
     }
 }
+
+@media screen and ( max-width: 425px ) {
+    .about-help {
+        width: 80%;
+        height: 95vh;
+    
+        ul {
+            height: 170px;
+    
+            li {
+                font-size: .9rem;
+            }
+        }
+    }
+}
+
+@media screen and ( max-width: 375px ) {
+    .about-help {
+        width: 80%;
+        height: 100vh;
+    
+        ul {
+            height: 190px;
+    
+            li {
+                font-size: .9rem;
+            }
+        }
+    }
+}
+
+@media screen and ( max-width: 320px ) {
+    .about-help {
+        width: 90%;
+        height: 110vh;
+    
+        ul {
+            height: 210px;
+        }
+    }
+}

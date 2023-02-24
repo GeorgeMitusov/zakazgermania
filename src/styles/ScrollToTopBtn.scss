@@ -56,3 +56,21 @@
         right: 0;
     }
 }
+
+@media screen and ( max-width: 425px ) {
+    .scrollToTopBtn {
+        width: 13.5%;
+    }
+}
+
+@media screen and ( max-width: 375px ) {
+    .scrollToTopBtn {
+        width: 15%;
+    }
+}
+
+@media screen and ( max-width: 320px ) {
+    .scrollToTopBtn {
+        width: 16%;
+    }
+}

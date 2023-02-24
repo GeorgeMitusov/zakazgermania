@@ -92,6 +92,17 @@
 @media screen and ( max-width: 1550px ) {
     .purchase {
         height: 110vh;
+
+        .purchase-container {
+            
+            .purchase-top {
+
+                button {
+                    margin-bottom: 1rem;
+                }
+            }
+            
+        }
     }
 }
 
@@ -158,6 +169,59 @@
                 button {
                     margin-top: 3.5rem;
                 }
+            }
+        }
+    }
+}
+
+@media screen and ( max-width: 425px ) {
+    .purchase {
+        height: 140vh;
+
+        .purchase-container {
+            width: 95%;
+            
+            .purchase-top {
+
+                button {
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and ( max-width: 375px ) {
+    .purchase {
+        height: 160vh;
+
+        .purchase-container {
+            
+            .purchase-top {
+
+                button {
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and ( max-width: 320px ) {
+    .purchase {
+        height: 185vh;
+
+        .purchase-container {
+            
+            .purchase-top {
+
+                button {
+                    margin-top: 2rem;
+                }
+            }
+
+            .purchase-bottom {
+                margin-bottom: 2rem;
             }
         }
     }

@@ -275,12 +275,84 @@
     .about-require {
         height: 200vh;
         width: 80%;
-        
     
         .about-require-container {
     
             .about-require-container-top {
                 height: 40%;
+            }
+        }
+    }
+}
+
+@media screen and ( max-width: 425px ) {
+    .about-require {
+        height: 245vh;
+        width: 80%;
+    
+        .about-require-container {
+            height: 230vh;
+            padding: 0.5rem;
+    
+            .about-require-container-top {
+                height: 30%;
+            }
+
+            .about-require-container-bottom {
+                height: 70%;
+
+                ul {
+                    height: 350px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and ( max-width: 375px ) {
+    .about-require {
+        height: 255vh;
+        width: 80%;
+    
+        .about-require-container {
+            height: 245vh;
+            padding: 0.5rem;
+    
+            .about-require-container-top {
+                height: 30%;
+            }
+
+            .about-require-container-bottom {
+                height: 70%;
+
+                ul {
+                    height: 350px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and ( max-width: 320px ) {
+    .about-require {
+        height: 255vh;
+        width: 90%;
+    
+        .about-require-container {
+            height: 245vh;
+            padding: 0.5rem;
+            margin-top: 4rem;
+    
+            .about-require-container-top {
+                height: 30%;
+            }
+
+            .about-require-container-bottom {
+                height: 70%;
+
+                ul {
+                    height: 360px;
+                }
             }
         }
     }

@@ -30,15 +30,10 @@
             border-radius: 2rem;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
             cursor: pointer;
-            transition: transform .3s linear;
 
             display: flex;
             justify-content: center;
             align-items: center;
-
-            &:hover {
-                transform: scale(1.05);
-            }
 
             .pick-up-item-icon {
                 width: 20%;
@@ -204,6 +199,86 @@
 
         .price-check-title {
             font-size: 1.4rem;
+        }
+    }
+}
+
+@media screen and ( max-width: 425px ) {
+    .price-pick-up {
+        height: 150vh;
+        width: 100%;
+
+        .price-pick-up-title {
+            font-size: 1.1rem;
+        }
+
+        .price-pick-up-list {
+            height: 900px;
+
+            .pick-up-item {
+                height: 250px;
+                width: 95%;
+                flex-direction: column;
+
+                .pick-up-item-icon {
+                    width: 25%;
+                    height: 35%;
+                    margin-top: 1rem;
+                }
+            }
+        }
+
+        .price-check-title {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@media screen and ( max-width: 375px ) {
+    .price-pick-up {
+        height: 140vh;
+
+        .price-pick-up-list {
+            height: 850px;
+
+            .pick-up-item {
+
+                .pick-up-item-descr {
+
+                    h1 {
+                        font-size: .7rem;
+                        margin-top: .5rem;
+                    }
+                }
+            }
+        }
+
+        .price-check-title {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+@media screen and ( max-width: 320px ) {
+    .price-pick-up {
+        height: 145vh;
+
+        .price-pick-up-list {
+            height: 900px;
+
+            .pick-up-item {
+                height: 290px;
+
+                .pick-up-item-descr {
+                    height: 55%;
+
+                    h1 {
+                        font-size: .7rem;
+                        white-space: normal;
+                        margin: 0;
+                    }
+                }
+            }
         }
     }
 }

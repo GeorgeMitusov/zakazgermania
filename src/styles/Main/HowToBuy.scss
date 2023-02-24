@@ -102,13 +102,14 @@
 
             .main-how-to-buy-section {
                 height: 95%;
+                
 
                 img {
                     height: 35vh;    
                 }
                 
                 .main-how-to-buy-section-descr {
-                    height: 39%;
+                    height: 38%;
 
                     h1 {
                         font-size: 1.5rem;
@@ -141,7 +142,7 @@
                 height: 100%;
 
                 img {
-                    height: 33vh;
+                    height: 34vh;
                 }
                 
                 .main-how-to-buy-section-descr {
@@ -151,6 +152,10 @@
                         white-space: nowrap;
                         margin-top: 1rem;
                     }
+                }
+
+                button {
+                    padding: .9rem 1.5rem;
                 }
             }
         }
@@ -196,6 +201,7 @@
 @media screen and ( max-width: 550px ) {
     .main-how-to-buy {
         height: auto;
+        overflow: hidden;
 
         h1 {
             font-size: 1.6rem;
@@ -225,6 +231,49 @@
                         white-space: nowrap;
                         margin-top: 1rem;
                     }
+                }
+            }
+        }
+    } 
+}
+
+@media screen and ( max-width: 425px ) {
+    .main-how-to-buy {
+        height: auto;
+
+        .main-how-to-buy-wrap {
+
+            .main-how-to-buy-section {
+                width: 85%;
+            }
+        }
+    } 
+}
+
+@media screen and ( max-width: 320px ) {
+    .main-how-to-buy {
+        height: auto;
+
+        .main-how-to-buy-wrap {
+
+            .main-how-to-buy-section {
+                width: 97%;
+
+                .main-how-to-buy-section-descr {
+
+                    h1 { 
+                        font-size: 1.3rem;
+                    }
+                }
+
+                button {
+                    padding: .8rem 1.3rem;
+                }
+                
+                &:hover {
+                    -webkit-transform: scale(.9);
+                    -ms-transform: scale(.9);
+                    transform: scale(.9);
                 }
             }
         }
