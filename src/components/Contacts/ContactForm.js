@@ -1,24 +1,48 @@
-import React, { useRef, useState } from 'react';
-import { useForm } from 'react-hook-form';
+import React, { useContext } from 'react';
+import { Context } from '../../context/Context';
+
+import * as Yup from "yup";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import emailjs from "@emailjs/browser";
 
 import { motion } from "framer-motion"
-
-import emailjs from '@emailjs/browser';
 
 import '../../styles/Contacts/ContactForm.scss';
 
 const ContactForm = () => {
 
-    const [ successMsg, setSuccessMsg ] = useState(false);
+    const { successMsg, setSuccessMsg, contactFormData } = useContext(Context); 
 
-    const { 
-        register, 
-        handleSubmit, 
-        formState: { errors },
-        reset
-    } = useForm();
-
-    const form = useRef();
+    const initialValues = {
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+    };
+    
+    const validationSchema = Yup.object().shape({
+        name: Yup.string().required("Name is required"),
+        email: Yup.string()
+          .email("Invalid email address")
+          .required("Email is required"),
+        subject: Yup.string().required("Subject is required"),
+        message: Yup.string().required("Message is required"),
+    });
+    
+    const handleSubmit = (values, { resetForm }) => {
+        const serviceId = "service_kxmglya";
+        const templateId = "zakazgerm_gmail";
+        const userId = "X6BZThkDbGkN2NKjC";
+    
+        emailjs.send(serviceId, templateId, values, userId)
+          .then((result) => {
+            console.log(result.text);
+            setSuccessMsg(true);
+            resetForm();
+          }, (error) => {
+            console.log(error.text);
+          });
+    };
 
     const formVars = {
         initial: { scale: 0,  opacity: 0 },
@@ -31,131 +55,6 @@ const ContactForm = () => {
             }
         }
     };
-    
-    const sendEmail = e => {
-
-        e.preventDefault();
-
-        emailjs.sendForm("service_l3d7iwl", 'glint_email_reply', form.current, 'X6BZThkDbGkN2NKjC')
-        .then( result => {
-            console.log("EMAIL_SUCCESS", result.status, result.text);
-        }, error => {
-            console.log("EMAIL_ERROR", error.text);
-        })
-        
-        e.target.reset();
-    }
-
-    const onSubmit = e => {
-        sendEmail(e);
-        setSuccessMsg(true);
-        reset();
-    }
-
-    const formContent = (
-        <>
-
-            <div className="contact-form-box">
-                <input
-                    { 
-                        ...register( "name", { 
-                            maxLength: 20, 
-                            pattern: /^[A-Za-z]+$/i,
-                            minLength: 2,
-                            required: true,
-                        })
-                    }  
-                    id="contactName" 
-                    placeholder='Ваше имя'
-                    name="name"
-                />
-
-                { errors?.name?.type === "required" && (
-                    <label className='contact-form-box-title require'> Это поле не может быть пустым. </label>
-                )}
-                { errors?.name?.type === "maxLength" && (
-                    <label className='contact-form-box-title'> Имя не может превышать 20 символов. </label>
-                )}
-                { errors?.name?.type === "minLength" && (
-                    <label className='contact-form-box-title'> Пожалуйста, введите не менее 2 символов. </label>
-                )}
-                { errors?.name?.type === "pattern" && (
-                    <label className='contact-form-box-title'> Только буквы. </label>
-                )} 
-
-             </div> 
-
-            <div className="contact-form-box">
-                 <input
-                    type="text"
-                    id="contactEmail" 
-                    placeholder='Ваша почта'
-                    name="email"
-                    { 
-                        ...register( "email", { 
-                            required: true,
-                            maxLength: 20, 
-                            pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
-                            minLength: 8,
-                        })
-                    }
-                />
-                { errors?.email?.type === "required" && (
-                    <label className='contact-form-box-title require'> Это поле не может быть пустым. </label>
-                )}
-                { errors?.email?.type === "maxLength" && (
-                    <label className='contact-form-box-title'> Почта не может превышать 20 символов. </label>
-                )}
-                { errors?.email?.type === "minLength" && (
-                    <label className='contact-form-box-title'> Пожалуйста, введите не менее 8 символов. </label>
-                )}
-                { errors?.email?.type === "pattern" && (
-                    <label className='contact-form-box-title'> Пожалуйста, укажите почту корректно. </label>
-                )}
-            </div> 
-
-            <div className="contact-form-box">
-                <input
-                    { ...register( "subject")}  
-                    id="contactSubject" 
-                    placeholder='Тема сообщения'
-                    name="subject"
-                />
-            </div>
-            <div className="contact-form-box">
-
-                 <textarea
-                    { 
-                        ...register( "message", 
-                        { 
-                            required: 'This is required',
-                            minLength: 15,
-                        })
-                    } 
-                    className='contactMessage'
-                    id='contactMessage'
-                    placeholder='Ваше сообщение'
-                    name="message"
-                />
-
-                { errors?.message?.type === "required" && (
-                    <label className='contact-form-box-title textarea require '> Это поле не может быть пустым. </label>
-                )}
-                { errors?.message?.type === "minLength" && (
-                    <label className='contact-form-box-title textarea'> Пожалуйста, введите не менее 15 символов. </label>
-                )}
-
-            </div>
-
-            <div className="contact-form-box">
-
-                <button className='contact-form-submit-btn'> 
-                    отправить
-                </button>
-
-            </div>
-        </>
-    );
 
     const sucMsg = (
         <div className='message-success'>
@@ -164,24 +63,79 @@ const ContactForm = () => {
                 Наша служба поддержки свяжется с вами в ближайшее время! 
             </p> 
         </div>
-    );        
+    ); 
+
+    const contactFormItem = contactFormData.map( ( i, id ) => (
+        <div className="contact-form-box" key={id}>
+            <Field
+                className="contact-form-box-field"
+                type={i.type} 
+                id={i.id} 
+                name={i.name} 
+                placeholder={i.placeholder}
+            />
+            <ErrorMessage 
+                name={i.name} 
+                component="div"
+                className='contact-form-box-error' 
+            />
+        </div>
+    ))
+
+    const form = successMsg ? sucMsg : (
+        <Formik
+            initialValues={initialValues}
+            validationSchema={validationSchema}
+            onSubmit={handleSubmit}
+        >
+            {({ touched, errors }) => (
+                <Form className='contact-form'>
+
+                    { contactFormItem }
+
+                    <div className="contact-form-box">
+                        <Field 
+                            className="contact-form-box-field textarea"
+                            as="textarea" 
+                            id="message" 
+                            name="message"
+                            placeholder='Ваше сообщение' 
+                        />
+                        <ErrorMessage 
+                            name="message" 
+                            component="div" 
+                            className='contact-form-box-error'
+                        />
+                    </div>
+
+                    <div className="contact-form-box">
+                        <button
+                            className='contact-form-submit-btn' 
+                            type="submit" 
+                            disabled={ Object.keys(errors).length > 0 ||
+                                Object.keys(touched).length === 0}
+                        >
+                            Submit
+                        </button>
+                    </div>
+
+                </Form>
+            )}
+        </Formik>
+    )
 
     return (
         <div className='contact-form-wrap'>
-            <motion.form 
-                className='contact-form'
-                ref={form}
+            <motion.div 
+                className='contact-form-container'
                 variants={formVars}
                 initial="initial"
                 animate='enter'
-                onSubmit={ e => handleSubmit(onSubmit(e))}
             >
-
-                { successMsg ? sucMsg : formContent }
-
-            </motion.form>
+                { form }
+            </motion.div>
         </div>
     )
 }
 
-export default ContactForm
+export default ContactForm;

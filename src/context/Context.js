@@ -284,6 +284,27 @@ const priceSocialData = [
     }
 ]
 
+const contactFormData = [
+    {
+        type: "text", 
+        id: "name", 
+        name: "name", 
+        placeholder: 'Ваше имя'
+    },
+    {
+        type: "email", 
+        id: "email", 
+        name: "email", 
+        placeholder: 'Ваша почта'
+    },
+    {
+        type: "text", 
+        id: "subject", 
+        name: "subject", 
+        placeholder: 'Тема сообщения'
+    },
+]
+
 const footerSocialsData = [ faFacebook, faTelegram, faInstagram ];
 
 export const Context = createContext();
@@ -293,6 +314,7 @@ const ContextDataProvider = ({ children }) => {
     const [ loading, setLoading ] = useState(false);
     const [ loadingContent, setLoadingContent ] = useState(true);
     const [ parallaxStr, setParallaxStr ] = useState(0);
+    const [ successMsg, setSuccessMsg ] = useState(false);
     const windowSize = useRef([ window.innerWidth, window.innerHeight ]);
 
     const screenWidth = windowSize.current[0];
@@ -325,6 +347,8 @@ const ContextDataProvider = ({ children }) => {
                 aboutSliderData, pickUpData,
                 priceListData, priceSocialData,
                 screenWidth, parallaxStr,
+                successMsg, setSuccessMsg,
+                contactFormData
             }}
         >
             { children }

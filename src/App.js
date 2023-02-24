@@ -9,27 +9,13 @@ import './styles/App.scss';
 
 function App() {
 
-  const { loading, setLoading } = useContext(Context); 
-
-  useEffect(() => {
-
-    setLoading(true);
-
-    setTimeout(() => {
-
-      setLoading(false);
-
-    }, 2200);
-
-  }, []);
-
   return (
     <div className="App">
 
       <Router>
 
-        { loading ? <Loader /> : <AnimatedRoutes /> }
-        
+        <AnimatedRoutes />
+
       </Router>
 
     </div>
@@ -37,3 +23,34 @@ function App() {
 }
 
 export default App;
+
+// function App() {
+
+//   const { loading, setLoading } = useContext(Context); 
+
+//   useEffect(() => {
+
+//     setLoading(true);
+
+//     setTimeout(() => {
+
+//       setLoading(false);
+
+//     }, 2200);
+
+//   }, []);
+
+//   return (
+//     <div className="App">
+
+//       <Router>
+
+//         { loading ? <Loader /> : <AnimatedRoutes /> }
+        
+//       </Router>
+
+//     </div>
+//   );
+// }
+
+// export default App;
