@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 import OrderHelp from '../Main/OrderHelp';
@@ -13,6 +13,10 @@ import FrontPageBgImg from '../../assets/about/about-page/6.jpg';
 import '../../styles/About/About.scss';
 
 const About = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <motion.div 

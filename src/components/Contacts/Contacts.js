@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 import ContactForm from './ContactForm'
@@ -7,6 +7,11 @@ import Footer from '../Main/Footer';
 import '../../styles/Contacts/Contacts.scss';
 
 const Contacts = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <motion.div 
       className='contacts'

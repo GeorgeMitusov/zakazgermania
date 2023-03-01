@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 import FrontPage from '../FrontPage';
@@ -12,6 +12,10 @@ import FrontPageBgImg from '../../assets/price/delivery/1.jpg';
 import '../../styles/Price/Price.scss';
 
 const Price = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <motion.div 
