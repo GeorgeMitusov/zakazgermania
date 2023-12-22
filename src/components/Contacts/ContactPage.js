@@ -1,24 +1,19 @@
-import React from 'react';
+import React from "react";
 
-import ContactForm from './ContactForm';
+import ContactForm from "./ContactForm";
 
-import '../../styles/Contacts/ContactPage.scss';
+import "../../styles/Contacts/ContactPage.scss";
 
 const ContactPage = () => {
-
   return (
-    <div className='contact-page'>
+    <div className="contact-page">
+      <div className="contact-page-wrap">
+        <div className="contact-page-info"></div>
 
-        <div className='contact-page-wrap'>
-
-            <div className='contact-page-info'></div>
-
-            <ContactForm />
-
-        </div>
-
+        <ContactForm />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default ContactPage
+export default ContactPage;

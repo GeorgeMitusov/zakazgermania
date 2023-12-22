@@ -1,52 +1,16 @@
 .main {
-    width: 100%;
-    height: 570vh;
+  width: 100%;
+  height: auto;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--white-color);
 }
 
-@media screen and ( max-width: 1550px ) {
-    .main {
-        height: 665vh;
-    }
-}
-
-@media screen and ( max-width: 1050px ) {
-    .main {
-        height: 700vh;
-    }
-}
-
-@media screen and ( max-width: 700px ) {
-    .main {
-        height: 1000vh;
-    }
-}
-
-@media screen and ( max-width: 550px ) {
-    .main {
-        height: 1050vh;
-    }
-}
-
-@media screen and ( max-width: 425px ) {
-    .main {
-        height: 1050vh;
-    }
-}
-
-@media screen and ( max-width: 375px ) {
-    .main {
-        height: 1055vh;
-    }
-}
-
-@media screen and ( max-width: 320px ) {
-    .main {
-        height: 1100vh;
-    }
+@media screen and (max-width: 1550px) {
+  .main {
+    height: auto;
+  }
 }

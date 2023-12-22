@@ -1,96 +1,112 @@
 .side-menu {
-    border: 1px solid red;
+  .side-menu-list {
+    border: 1px solid transparent;
 
-    .side-menu-list {
-        border: 1px solid transparent;
+    width: 100%;
+    height: 20vh;
 
-        width: 100%;
-        height: 20vh;
+    .side-menu-item {
+      margin: 3rem 0rem;
 
-        .side-menu-item {
-            margin: 3rem 0rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+      .side-menu-item-link {
+        font-size: 1.5rem;
+        text-align: center;
+        color: var(--white-color);
+        transition: color 0.5s linear;
 
-            .side-menu-item-link {
-                font-size: 1.5rem;
-                text-align: center;
-                color: var(--white-color);
-                transition: color .5s linear;
-
-                &:hover {
-                    color: var(--main-gray-color)
-                }
-            }
+        &:hover {
+          color: var(--main-gray-color);
         }
+      }
     }
+  }
 }
 
 .bm-burger-button {
-    position: fixed;
-    width: 36px;
-    height: 30px;
-    right: 3rem;
-    top: 1.5rem;
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 3rem;
+  top: 1.5rem;
 }
 
 .bm-burger-bars {
-    background-color: var(--main-gray-color);
-    transition: all .5s linear;
+  background-color: var(--main-gray-color);
+  transition: all 0.5s linear;
 }
 
 .bm-burger-bars-hover {
-    background-color: var(--gray-color2);
+  background-color: var(--gray-color2);
 }
 
 .bm-cross-button {
-    height: 24px;
-    width: 24px;
+  height: 24px;
+  width: 24px;
 }
 
 .bm-cross {
-    background-color: var(--main-gray-color);
+  background-color: var(--main-gray-color);
 }
 
 .bm-menu-wrap {
-    position: fixed;
-    width: 20% !important;
-    height: 100% !important;
-    top: 0;
+  position: fixed;
+  width: 25% !important;
+  height: 100%;
+  top: 0;
 
-    border-bottom: 5px ridge var(--main-gray-color);
-    border-top: 5px ridge var(--main-gray-color);
-    border-right: 5px ridge var(--main-gray-color);
-    border-left: 5px ridge var(--main-gray-color);
+  border-bottom: 5px ridge var(--main-gray-color);
+  border-top: 5px ridge var(--main-gray-color);
+  border-right: 5px ridge var(--main-gray-color);
+  border-left: 5px ridge var(--main-gray-color);
 }
 
 .bm-menu {
-    background-color: var(--black-color1);
-    width: 100%;
-    padding: 2.5em 1.5em 0;
-    font-size: 1.3em;
+  background-color: var(--black-color1);
+  width: 100%;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.3em;
 }
 
 .bm-morph-shape {
-    background-color: var(--black-color2);
+  background-color: var(--black-color2);
 }
 
 .bm-item {
-    display: inline-block;
+  display: inline-block;
 }
 
 .bm-overlay {
-    background: rgba(0, 0, 0, 0.3);
-    width: 100% !important;
-    height: 100% !important;
-    margin-top: -2.5rem;
-    margin-left: -21rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
 }
 
-@media screen and ( max-width: 700px ) {
-    .bm-burger-button {
-        right: 1.5rem;
-    }
+@media screen and (max-width: 1050px) {
+  .bm-menu-wrap {
+    width: 35% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bm-burger-button {
+    right: 1.5rem;
+  }
+
+  .bm-menu-wrap {
+    width: 45% !important;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .bm-menu-wrap {
+    width: 100% !important;
+  }
 }

@@ -1,130 +1,118 @@
 .header {
+  width: 100%;
+  height: 80px;
+  background-color: var(--black-color2);
+  border-bottom: 3px ridge var(--main-gray-color);
+  border-top: 3px ridge var(--main-gray-color);
+  border-right: 5px ridge var(--main-gray-color);
+  border-left: 5px ridge var(--main-gray-color);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .navbar {
     width: 100%;
     height: 80px;
-    background-color: var(--black-color2);
-    border-bottom: 3px ridge var(--main-gray-color);
-    border-top: 3px ridge var(--main-gray-color);
-    border-right: 5px ridge var(--main-gray-color);
-    border-left: 5px ridge var(--main-gray-color);
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-
-    z-index: 999;
+    color: var(--black-color);
+    opacity: 0.85;
+    z-index: 100;
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: flex-start;
 
+    .header-logo {
+      width: 13%;
+      height: 100%;
+      cursor: pointer;
+      border-top: 3px ridge var(--main-gray-color);
+      border-bottom: 3px ridge var(--main-gray-color);
+      margin-left: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .header {
     .navbar {
-        width: 100%;
-        height: 80px;
-        color: var(--black-color);
-        opacity: 0.85;
-        z-index: 100;
+      width: 100%;
 
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-
-        .header-logo {
-            width: 13%;
-            height: 100%;
-            cursor: pointer;
-            border-top: 2px ridge var(--main-gray-color);
-            border-bottom: 3px ridge var(--main-gray-color);
-            margin-left: 3rem;
-        }
+      .header-logo {
+        border-top: 3px ridge var(--main-gray-color);
+      }
     }
+  }
 }
 
-@media screen and ( max-width: 1550px ) {
-    .header {
+@media screen and (max-width: 1050px) {
+  .header {
+    .navbar {
+      opacity: 0.95;
 
-        .navbar {
-            width: 100%;
-
-            .header-logo {
-                border-top: 3px ridge var(--main-gray-color);
-            }
-        }
+      .header-logo {
+        width: 18%;
+      }
     }
+  }
 }
 
-@media screen and ( max-width: 1050px ) {
-    .header {
-
-        .navbar {
-            opacity: 0.95;
-
-            .header-logo {
-                width: 18%;
-            }
-        }
+@media screen and (max-width: 700px) {
+  .header {
+    .navbar {
+      .header-logo {
+        width: 27%;
+        margin-left: 1.5rem;
+      }
     }
+  }
 }
 
-@media screen and ( max-width: 700px ) {
-    .header {
-
-        .navbar {
-
-            .header-logo {
-                width: 27%;
-                margin-left: 1.5rem;
-            }
-        }
+@media screen and (max-width: 550px) {
+  .header {
+    .navbar {
+      .header-logo {
+        width: 30%;
+        margin-left: 1rem;
+      }
     }
+  }
 }
 
-@media screen and ( max-width: 550px ) {
-    .header {
-
-        .navbar {
-
-            .header-logo {
-                width: 30%;
-                margin-left: 1rem;
-            }
-        }
+@media screen and (max-width: 425px) {
+  .header {
+    .navbar {
+      .header-logo {
+        width: 38%;
+        margin-left: 0.5rem;
+      }
     }
+  }
 }
 
-@media screen and ( max-width: 425px ) {
-    .header {
-
-        .navbar {
-
-            .header-logo {
-                width: 38%;
-                margin-left: 0.5rem;
-            }
-        }
+@media screen and (max-width: 375px) {
+  .header {
+    .navbar {
+      .header-logo {
+        width: 43%;
+      }
     }
+  }
 }
 
-@media screen and ( max-width: 375px ) {
-    .header {
-
-        .navbar {
-    
-            .header-logo {
-                width: 43%;
-            }
-        }
+@media screen and (max-width: 320px) {
+  .header {
+    .navbar {
+      .header-logo {
+        width: 50%;
+      }
     }
-}
-
-@media screen and ( max-width: 320px ) {
-    .header {
-
-        .navbar {
-
-            .header-logo {
-                width: 50%;
-            }
-        }
-    }
+  }
 }

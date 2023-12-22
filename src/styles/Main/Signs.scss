@@ -1,174 +1,163 @@
 .signs {
+  width: 100%;
+  height: 60vh;
+  background-color: var(--white-color);
+
+  display: flex;
+
+  .signs-parallax {
     width: 100%;
-    height: 55vh;
-    background-color: var(--white-color);
+    height: 100%;
 
     display: flex;
+    justify-content: center;
+    align-items: center;
 
-    .signs-parallax {
-        width: 100%;
+    .signs-container {
+      width: 80%;
+      height: 25rem;
+      margin: 0 auto;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .signs-item {
+        width: 25%;
         height: 100%;
+        color: white;
 
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        .signs-container {
-            width: 65%;
-            height: 350px;
-            margin: 0 auto;
+        text-align: center;
+        padding: 1rem;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .signs-item {
-                width: 25%;
-                height: 100%;
-                color: white;
-
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-
-                text-align: center;
-                padding: 1rem;
-
-                .signs-item-icon {
-                    font-size: 5.5rem;
-                    margin-bottom: 1rem;
-                }
-
-                .signs-item-descr {
-                    margin-top: 1rem;
-
-                    h1 {
-                        font: 2.5rem var(--roboto-bold-italic);
-                    }
-
-                    p {
-                        margin-top: 0.5rem;
-                        text-align: center;
-                    }
-                }
-            }
+        .signs-item-icon {
+          font-size: 5.5rem;
+          margin-bottom: 1rem;
         }
-    }
-}
 
-@media screen and ( max-width: 1550px ) {
-    .signs {
-        height: 60vh;
+        .signs-item-descr {
+          margin-top: 1rem;
 
-        .signs-parallax {
+          h1 {
+            font: 2.5rem var(--roboto-bold-italic);
+          }
 
-            .signs-container {
-
-                .signs-item {
-
-                    .signs-item-icon {
-                        font-size: 5rem;
-                    }
-
-                    .signs-item-descr {
-
-                        h1 {
-                            font-size: 2rem;
-                            white-space: nowrap;
-                        }
-                    }
-                }
-            }
+          p {
+            margin-top: 0.5rem;
+            text-align: center;
+          }
         }
+      }
     }
+  }
 }
 
-@media screen and ( max-width: 1050px ) {
-    .signs {
+@media screen and (max-width: 1550px) {
+  .signs {
+    height: 60vh;
 
-        .signs-parallax {
+    .signs-parallax {
+      .signs-container {
+        .signs-item {
+          .signs-item-icon {
+            font-size: 5rem;
+          }
 
-            .signs-container {
-                width: 80%;
-
-                .signs-item {
-
-                    .signs-item-icon {
-                        font-size: 4rem;
-                    }
-
-                    .signs-item-descr {
-
-                        h1 {
-                            font-size: 1.7rem;
-                        }
-                    }
-                }
+          .signs-item-descr {
+            h1 {
+              font-size: 2rem;
+              white-space: nowrap;
             }
+          }
         }
+      }
     }
+  }
 }
 
-@media screen and ( max-width: 700px ) {
-    .signs {
-        height: 150vh;
+@media screen and (max-width: 1050px) {
+  .signs {
+    .signs-parallax {
+      .signs-container {
+        width: 80%;
 
-        .signs-parallax {
-            height: 100%;
+        .signs-item {
+          .signs-item-icon {
+            font-size: 4rem;
+          }
 
-            .signs-container {
-                height: 100%;
-                flex-direction: column;
-
-                .signs-item {
-                    width: 70%;
-                    margin: 1rem;
-                }
+          .signs-item-descr {
+            h1 {
+              font-size: 1.7rem;
             }
+          }
         }
+      }
     }
+  }
 }
 
-@media screen and ( max-width: 425px ) {
-    .signs {
-        height: 165vh;
+@media screen and (max-width: 768px) {
+  .signs {
+    height: 150vh;
+
+    .signs-parallax {
+      height: 100%;
+
+      .signs-container {
+        height: 100%;
+        flex-direction: column;
+
+        .signs-item {
+          width: 70%;
+          margin: 1rem;
+        }
+      }
     }
+  }
 }
 
-@media screen and ( max-width: 375px ) {
-    .signs {
-        height: 175vh;
-    }
+@media screen and (max-width: 425px) {
+  .signs {
+    height: 165vh;
+  }
 }
 
-@media screen and ( max-width: 320px ) {
-    .signs {
-        height: 185vh;
+@media screen and (max-width: 375px) {
+  .signs {
+    height: 175vh;
+  }
+}
 
-        .signs-parallax {
+@media screen and (max-width: 320px) {
+  .signs {
+    height: 185vh;
 
-            .signs-container {
-                width: 80%;
+    .signs-parallax {
+      .signs-container {
+        width: 80%;
 
-                .signs-item {
+        .signs-item {
+          .signs-item-icon {
+            font-size: 4rem;
+          }
 
-                    .signs-item-icon {
-                        font-size: 4rem;
-                    }
-
-                    .signs-item-descr {
-
-                        h1 {
-                            font-size: 1.5rem;
-                        }
-
-                        p {
-                            font-size: .9rem;
-                        }
-                    }
-                }
+          .signs-item-descr {
+            h1 {
+              font-size: 1.5rem;
             }
+
+            p {
+              font-size: 0.9rem;
+            }
+          }
         }
+      }
     }
+  }
 }

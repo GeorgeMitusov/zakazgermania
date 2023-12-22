@@ -1,200 +1,180 @@
 .slick-slider {
+  width: 100%;
+  height: 88vh;
+
+  .slider {
     width: 100%;
     height: 88vh;
 
-    .slider {
+    .slide {
+      width: 100%;
+      height: 88vh;
+
+      img {
         width: 100%;
-        height: 88vh;
+        height: 100%;
+      }
 
-        .slide {
-            width: 100%;
-            height: 88vh;
+      .slide-overlay {
+        width: 100%;
+        height: 25vh;
 
-            img {
-                width: 100%;
-                height: 100%;
-            }
+        background-color: var(--black-trans-color);
+        color: red;
 
-            .slide-overlay {
-                width: 100%;
-                height: 25vh;
+        position: absolute;
+        bottom: 75px;
 
-                background-color: var(--black-trans-color);
-                color: red;
+        display: flex;
+        align-items: center;
 
-                position: absolute;
-                bottom: 75px;
+        .slide-overlay-container {
+          width: 7%;
+          height: 90%;
+          color: var(--white-color);
+          margin-left: 4%;
 
-                display: flex;
-                align-items: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
 
-                .slide-overlay-container {
-                    width: 7%;
-                    height: 90%;
-                    color: var(--white-color);
-                    margin-left: 4%;
+          h1 {
+            font: 4rem var(--merri-bold);
+            margin-bottom: 1rem;
+          }
 
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
+          h4 {
+            font-family: var(--merri-bold-italic);
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            color: var(--gray-color3);
+          }
 
-                    h1 {
-                        font: 4rem var(--merri-bold);
-                        margin-bottom: 1rem;
-                    }
-
-                    h4 {
-                        font-family: var(--merri-bold-italic);
-                        font-size: 1.4rem;
-                        margin-bottom: 2rem;
-                        color: var(--gray-color3);
-                    }
-
-                    span {
-                        width: 10%;
-                        border: 3px solid var(--white-color);
-                    }
-                }
-            }
+          span {
+            width: 10%;
+            border: 3px solid var(--white-color);
+          }
         }
+      }
     }
+  }
 }
 
-@media screen and ( max-width: 1550px ) {
-    .slick-slider {
-        height: 86vh;
-    }
+@media screen and (max-width: 1550px) {
+  .slick-slider {
+    height: 86vh;
+  }
 }
 
-@media screen and ( max-width: 1050px ) {
-    .slick-slider {
+@media screen and (max-width: 1050px) {
+  .slick-slider {
+    .slider {
+      .slide {
+        .slide-overlay {
+          .slide-overlay-container {
+            height: 100%;
+            width: 10%;
+            margin-left: 2.5%;
 
-        .slider {
-
-            .slide {
-
-                .slide-overlay {
-
-                    .slide-overlay-container {
-                        height: 100%;
-                        width: 10%;
-                        margin-left: 2.5%;
-
-                        h1 {
-                            font-size: 3rem;
-                        }
-
-                        h4 {
-                            font-size: 1rem;
-                        }
-
-                        span {
-                            border-width: 2px;
-                        }
-                    }
-                }
+            h1 {
+              font-size: 3rem;
             }
+
+            h4 {
+              font-size: 1rem;
+            }
+
+            span {
+              border-width: 2px;
+            }
+          }
         }
+      }
     }
+  }
 }
 
-@media screen and ( max-width: 700px ) {
-    .slick-slider {
+@media screen and (max-width: 700px) {
+  .slick-slider {
+    .slider {
+      .slide {
+        .slide-overlay {
+          .slide-overlay-container {
+            width: 13%;
+            margin-left: 0.7%;
 
-        .slider {
-
-            .slide {
-
-                .slide-overlay {
-
-                    .slide-overlay-container {
-                        width: 13%;
-                        margin-left: .7%;
-
-                        h1 {
-                            font-size: 2.5rem;
-                        }
-                    }
-                }
+            h1 {
+              font-size: 2.5rem;
             }
+          }
         }
+      }
     }
+  }
 }
 
-@media screen and ( max-width: 425px ) {
-    .slick-slider {
-
-        .slider {
-
-            .slide {
-
-                .slide-overlay {
-
-                    .slide-overlay-container {
-
-                        h1 {
-                            font-size: 2rem;
-                        }
-
-                        h4 {
-                            font-size: .8rem;
-                            text-align: center;
-                        }
-
-                        span {
-                            width: 20%;
-                        }
-                    }
-                }
+@media screen and (max-width: 425px) {
+  .slick-slider {
+    .slider {
+      .slide {
+        .slide-overlay {
+          .slide-overlay-container {
+            h1 {
+              font-size: 2rem;
             }
+
+            h4 {
+              font-size: 0.8rem;
+              text-align: center;
+            }
+
+            span {
+              width: 20%;
+            }
+          }
         }
+      }
     }
+  }
 }
 
-@media screen and ( max-width: 375px ) {
-    .slick-slider {
+@media screen and (max-width: 375px) {
+  .slick-slider {
+    .slider {
+      .slide {
+        .slide-overlay {
+          .slide-overlay-container {
+            width: 13%;
+            margin-left: 0.7%;
 
-        .slider {
-
-            .slide {
-
-                .slide-overlay {
-
-                    .slide-overlay-container {
-                        width: 13%;
-                        margin-left: .7%;
-
-                        h1 {
-                            font-size: 2.5rem;
-                        }
-                    }
-                }
+            h1 {
+              font-size: 2.5rem;
             }
+          }
         }
+      }
     }
+  }
 }
 
-@media screen and ( max-width: 320px ) {
-    .slick-slider {
+@media screen and (max-width: 320px) {
+  .slick-slider {
+    .slider {
+      .slide {
+        .slide-overlay {
+          height: 27vh;
 
-        .slider {
+          .slide-overlay-container {
+            width: 13%;
+            text-align: center;
 
-            .slide {
-
-                .slide-overlay {
-                    height: 27vh;
-
-                    .slide-overlay-container {
-                        width: 13%;
-                        text-align: center;
-
-                        h1 {
-                            font-size: 2rem;
-                        }
-                    }
-                }
+            h1 {
+              font-size: 2rem;
             }
+          }
         }
+      }
     }
+  }
 }

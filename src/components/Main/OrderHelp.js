@@ -1,48 +1,46 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from "react";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import { motion, useAnimation } from "framer-motion"
-import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
-import  '../../styles/Main/OrderHelp.scss';
+import "../../styles/Main/OrderHelp.scss";
 
 const OrderHelp = () => {
-
   const controls = useAnimation();
-  const [ ref, inView ] = useInView();
+  const [ref, inView] = useInView();
 
   useEffect(() => {
-    if ( inView ) {
-      controls.start('enter')
+    if (inView) {
+      controls.start("enter");
+    } else {
+      controls.start("exit");
     }
-    else {
-      controls.start('exit')
-    }
-  }, [ controls, inView ])
+  }, [controls, inView]);
 
   const mainOrderVars = {
-    initial: { x: "-100%",  opacity: 0 },
-    enter: { 
-      x: '0', 
+    initial: { x: "-100%", opacity: 0 },
+    enter: {
+      x: "0",
       opacity: 1,
       transition: {
-        duration: 2
-      }
+        duration: 2,
+      },
     },
-    exit: { x: '100%', opacity: 0 }
+    exit: { x: "100%", opacity: 0 },
   };
 
   return (
-    <div className='main-order-help-wrap'>
-      <motion.div 
-        className='main-order-help'
+    <div className="main-order-help-wrap">
+      <motion.div
+        className="main-order-help"
         ref={ref}
         variants={mainOrderVars}
         initial="initial"
         animate={controls}
       >
-        <div className='main-order-help-box'>
+        <div className="main-order-help-box">
           <h1> Мы поможем купить Вам автомобиль и запчасти в Германии. </h1>
           <Link to="/contacts">
             <button> Заказать осмотр </button>
@@ -50,7 +48,7 @@ const OrderHelp = () => {
         </div>
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default OrderHelp
+export default OrderHelp;

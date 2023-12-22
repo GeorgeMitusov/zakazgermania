@@ -1,37 +1,38 @@
 .pre-footer {
+  width: 100%;
+  height: 75vh;
+  background-color: var(--main-gray-color);
+
+  .pre-footer-parallax {
     width: 100%;
-    height: 70vh;   
-    background-color: var(--main-gray-color);
-
-    .pre-footer-parallax {
-        width: 100%;
-        height: 100%;
-        background-size: contain;
-    }
+    height: 100%;
+    background-size: contain;
+  }
 }
 
-@media screen and ( max-width: 1550px ) {
-    .pre-footer {
-        height: 60vh;
-    }
+@media screen and (max-width: 1550px) {
+  .pre-footer {
+    height: 60vh;
+  }
 }
 
-@media screen and ( max-width: 1050px ) {
-    .pre-footer {
-        height: 70vh;
-    }
+@media screen and (max-width: 1050px) {
+  .pre-footer {
+    height: 70vh;
+  }
 }
 
-@media screen and ( max-width: 700px ) {}
-
-@media screen and ( max-width: 550px ) {
-    .pre-footer {
-        height: 100vh;
-    }
+@media screen and (max-width: 768px) {
 }
 
-@media screen and ( max-width: 425px ) {
-    .pre-footer {
-        height: 80vh;
-    }
+@media screen and (max-width: 550px) {
+  .pre-footer {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .pre-footer {
+    height: 80vh;
+  }
 }
